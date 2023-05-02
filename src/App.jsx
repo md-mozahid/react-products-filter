@@ -1,12 +1,12 @@
-import FilterableProductTable from "./components/FilterableProductTable";
-import { Products } from "./components/Products";
+import Table from './components/Table'
+import { Products } from './components/products/Products'
 
 function App() {
   return (
     <>
-      <FilterableProductTable products={Products} />
+      <Table products={Products} />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

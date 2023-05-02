@@ -1,15 +1,18 @@
+import React from 'react'
+
 const ProductRow = ({ product }) => {
-  const name = product.stocked ? (
+  const productName = product.stocked ? (
     product.name
   ) : (
     <span style={{ color: 'red' }}>{product.name}</span>
   )
-
   return (
-    <tr>
-      <td>{name}</td>
-      <td>{product.price}</td>
-    </tr>
+    <>
+      <tr>
+        <td>{productName}</td>
+        <td>{product.price}</td>
+      </tr>
+    </>
   )
 }
 

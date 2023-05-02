@@ -1,28 +1,48 @@
+import React from 'react'
+
 const SearchBar = ({
-  filterText,
-  inStockOnly,
-  filterTextChange,
-  stockOnlyChange,
+  filterProduct,
+  inStockProduct,
+  filterChange,
+  stockChange,
+  productName,
+  productChange,
 }) => {
   return (
     <>
-      <form>
+      <h1 className="text-2xl text-center uppercase pb-3">
+        product filter cart
+      </h1>
+      <form className="pb-5">
         <input
+          className="inputText"
           type="text"
-          value={filterText}
           placeholder="Search..."
-          onChange={(e) => filterTextChange(e.target.value)}
+          value={filterProduct}
+          onChange={(e) => filterChange(e.target.value)}
         />
         <br />
-        <input
-          type="checkbox"
-          checked={inStockOnly}
-          onChange={(e) => stockOnlyChange(e.target.checked)}
-        />
-        Only show products in stock
+        <label>
+          <input
+            className="mr-2"
+            type="checkbox"
+            value={inStockProduct}
+            onChange={(e) => stockChange(e.target.checked)}
+          />
+          Only available products
+        </label>
+        <br />
+        <label>
+          <input
+            type="checkbox"
+            value={productName}
+            onChange={(e) => productChange(e.target.checked)}
+          />{' '}
+          Apple
+        </label>
       </form>
     </>
-  );
-};
+  )
+}
 
-export default SearchBar;
+export default SearchBar

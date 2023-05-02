@@ -1,6 +1,15 @@
-.app {
-  background-color: cadetblue;
-  max-width: 350px;
-  margin: auto;
-  padding: 10px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .inputText {
+    @apply w-full p-2 border-0 outline-0 rounded text-base text-gray-800 my-2;
+  }
+
+  thead,
+  tr,
+  td {
+    @apply border px-2 text-center;
+  }
 }
